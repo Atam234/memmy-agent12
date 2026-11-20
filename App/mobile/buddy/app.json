@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Buddy",
+    "slug": "buddy",
+    "scheme": "buddy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E8743B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "bot.memmy.buddy",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Buddy connects to the Memmy agent running on your computer over your local network.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "android": {
+      "package": "bot.memmy.buddy",
+      "adaptiveIcon": {
+        "backgroundColor": "#E8743B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
+  }
+}
